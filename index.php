@@ -11,4 +11,12 @@ $app['debug'] = true;
 $app->get('/',function() {
   return new Response("This page intentionally left blank.");
 });
+
+$app->get('/test',function() {
+  return new Response("Mobius API test was successful!");
+});
+
+$app->get('/test_json',function() {
+  return new JsonResponse(array("response" => "Mobius API JSON test was successful!"));
+});
 ?>
