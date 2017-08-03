@@ -19,4 +19,16 @@ $app->get('/test',function() {
 $app->get('/test_json',function() {
   return new JsonResponse(array("response" => "Mobius API JSON test was successful!"));
 });
+
+$app->post('/auth',function()) {
+  // Do some magic here and return a JWT
+};
+
+$app->post('/user',function(Request $request) {
+  // Return user settings determined by the JWT
+});
+
+$app->post('/game',function(Request $request) {
+  // Return game related information detemined by POST variables and the supplied JWT.
+});
 ?>
